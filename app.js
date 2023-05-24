@@ -9,51 +9,156 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 const html = `
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello from Render!</title>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script>
-      setTimeout(() => {
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 },
-          disableForReducedMotion: true
-        });
-      }, 500);
-    </script>
-    <style>
-      @import url("https://p.typekit.net/p.css?s=1&k=vnd5zic&ht=tk&f=39475.39476.39477.39478.39479.39480.39481.39482&a=18673890&app=typekit&e=css");
-      @font-face {
-        font-family: "neo-sans";
-        src: url("https://use.typekit.net/af/00ac0a/00000000000000003b9b2033/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/00ac0a/00000000000000003b9b2033/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/00ac0a/00000000000000003b9b2033/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
-        font-style: normal;
-        font-weight: 700;
-      }
-      html {
-        font-family: neo-sans;
-        font-weight: 700;
-        font-size: calc(62rem / 16);
-      }
-      body {
-        background: white;
-      }
-      section {
-        border-radius: 1em;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
-  </head>
-  <body>
-    <section>
-      Hello from Render!
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="home.css">
+
+    <title>Sports Equipments Manager</title>
+</head>
+
+<body>
+    <audio controls autoplay="true" loop="true" preload="auto">
+        <source src="MEDIA/Bouncingfootballeffect.mp3" type="audio/mp3">
+    </audio>
+
+    <nav class="navbar">
+
+        <div class="logobar">
+            <h1>EQUIPO MANAGER</h1>
+            <img src="MEDIA/logobyme.png" alt="LOGO" height="200px" width="220px">
+        </div>
+
+        <div class="links">
+            <a class="active" href="home.html">HOME</a>
+            <a href="login.html">LOGIN</a>
+            <a href="aboutus.html">ABOUT</a>
+            <a href="gallery.html">GALLERY</a>
+
+            <div class="dropdown">
+                <a href="">EQUIPMENT^</a>
+
+                <div class="dropdown-content">
+                    <a href="equipments.html">Available</a>
+                    <a href="#">Link 2</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <section class="maincontent">
+
+        <div class="landingpage">
+
+            <div class="landtext">
+                <h2>Sports Equipments Management</h2>
+                <p id="para1">
+                  To ease the work of equipment Management in sports industry<br>
+                  Our product ensures
+                  <ul>
+                  <li>purchasing equipment from supplier</li>
+                  <li>inventory</li>
+                  <li>checking condition of equipment</li>
+                  <li>servicing from company</li>
+                  <li>security access control</li>
+                  <li>keeps track of equipment allocation to the students.</li>
+                  <br>
+                  <div class="landbuttons">
+                    <button>Get Started</button>
+                </div>   
+            </div>
+
+            <div class="card2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pNHGxugHEV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            
+
+        </div>
+
+            <marquee behaviour ="alternate" scrollamount="40">
+               <marquee behaviour ="alternate" direction="down" scrollamount="30">
+                   <img src="MEDIA/football.png" class="ball">
+               </marquee>
+            </marquee>
+        
+
+        <h1><center>Sports Equipments available</center></h1>
+
+        <div class="cards">
+
+            <div class="carditem">
+                <div class="cardimg">
+                    <img src="MEDIA/cricket.png" alt="">
+                </div>
+                <div class="cardtext">
+                    <h1>Cricket Bat</h1>
+                </div>
+            </div>
+
+            <div class="carditem">
+                <div class="cardimg">
+                    <img src="MEDIA/badminton.png" alt="">
+                </div>
+                <div class="cardtext">
+                    <h1>Badminton Racquet</h1>
+                </div>
+            </div>
+
+            <div class="carditem">
+                <div class="cardimg">
+                    <img src="MEDIA/discus.png" alt="">
+                </div>
+                <div class="cardtext">
+                    <h1>Discus Throw</h1>
+                </div>
+            </div>
+
+            <div class="carditem">
+                <div class="cardimg">
+                    <img src="MEDIA/basketball.png" alt="">
+                </div>
+                <div class="cardtext">
+                    <h1>Basketball</h1>
+                </div>
+            </div>
+
+        </div>
     </section>
-  </body>
+
+    <footer>
+        <div class="socialmedia">
+            <div>
+                <h1>Follow us at</h1>
+            </div>
+
+            <div class="icons">
+                <img src="MEDIA/fbicon.png" alt="">
+                <img src="MEDIA/instaicon.png" alt="">
+                <img src="MEDIA/twittericon.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="address">
+            <h3>
+                No.250 M.G.road <br>
+                Bengaluru - 560050
+                <br>
+                Sportsequipments@gmail.com
+                <br>©Created by Harshitha JP
+            </h3>
+        </div>
+    </footer>
+
+</body>
+</html>
+
 </html>
 `
